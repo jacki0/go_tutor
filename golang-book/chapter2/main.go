@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-var x string = "Hello World"
+const x string = "Hello World"
 
 func main() {
     fmt.Println(x)
