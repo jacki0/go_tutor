@@ -2,8 +2,12 @@ package main
 
 import "fmt"
 
+var x string = "Hello World"
+
 func main() {
-    fmt.Println(len("Hello World"))
-    fmt.Println("Hello World"[1])
-    fmt.Println("Hello " + "World")
+    fmt.Println(x)
+}
+
+func f() {
+    fmt.Println(x)
 }
