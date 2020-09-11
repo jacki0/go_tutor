@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-
+/*
 func main() {
     fmt.Println(1)
     fmt.Println(2)
@@ -13,4 +13,13 @@ func main() {
     fmt.Println(8)
     fmt.Println(9)
     fmt.Println(10)
+}*/
+
+func main() {
+    i := 1
+    for i <= 10 {
+        fmt.Println(i)
+        i += 1
+    }
 }
+
