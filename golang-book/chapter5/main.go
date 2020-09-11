@@ -32,7 +32,7 @@ func main() {
             fmt.Println(i, "odd")
         }
     }
-}*/
+}
 
 func main() {
 	for i := 1; i <= 6; i++ {
@@ -53,4 +53,12 @@ func main() {
 			fmt.Println("Unknown Number")
 		}
 	}
+}*/
+
+func main() {
+    for i := 1; i <= 100; i++ {
+        if i % 3 == 0 {
+            fmt.Println(i)
+        }
+    }
 }
