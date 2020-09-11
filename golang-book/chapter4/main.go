@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-    var F float64
-    fmt.Scanf("%f", &F)
-    C := (F - 32) * 5 / 9
-    fmt.Println(C)
+    var feets float64
+    fmt.Scanf("%f", &feets)
+    meters := feets * 0.3048
+    fmt.Println(meters)
 }
