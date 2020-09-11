@@ -3,9 +3,8 @@ package main
 import "fmt"
 
 func main() {
-    fmt.Println(true && true)
-    fmt.Println(true && false)
-    fmt.Println(true || true)
-    fmt.Println(true || false)
-    fmt.Println(!true)
+    var F float64
+    fmt.Scanf("%f", &F)
+    C := (F - 32) * 5 / 9
+    fmt.Println(C)
 }
