@@ -15,3 +15,4 @@
 # vendor/
 
 *.go.save
+*.go.swp
