@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+
 /*
 func main() {
     var x [5]int
@@ -29,7 +30,7 @@ func main() {
     x[1] = 93
     x[2] = 77
     x[3] = 82
-    x[4] = 83 
+    x[4] = 83
 
     var total float64 = 0
     for _, value := range x {
@@ -70,7 +71,7 @@ func main() {
     x := make(map[int]int)
     x[1] = 10
     fmt.Println(x[1])
-}*/
+}
 
 func main() {
     elements := make(map[string]string)
@@ -88,4 +89,23 @@ func main() {
     if name, ok := elements["Un"]; ok {
         fmt.Println(name, ok)
     }
+}*/
+
+func main() {
+	elements := map[string]string{
+		"H":  "Hydrogen",
+		"He": "Helium",
+		"Li": "Lithium",
+		"Be": "Beryllium",
+		"B":  "Boron",
+		"C":  "Carbon",
+		"N":  "Nitrogen",
+		"O":  "Oxygen",
+		"F":  "Fluorine",
+		"Ne": "Neon",
+	}
+
+	if name, ok := elements["Un"]; ok {
+		fmt.Println(name, ok)
+	}
 }
