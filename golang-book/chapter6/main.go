@@ -36,7 +36,7 @@ func main() {
         total += value
     }
     fmt.Println(total / float64(len(x)))
-}*/
+}
 
 func main() {
     x := [5]float64{ 98, 93, 77, 82, 83 }
@@ -45,4 +45,10 @@ func main() {
         total += value
     }
     fmt.Println(total / float64(len(x)))
+}*/
+
+func main() {
+    slice1 := []int{1, 2, 3}
+    slice2 := append(slice1, 4, 5)
+    fmt.Println(slice1, slice2)
 }
