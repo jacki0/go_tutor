@@ -21,7 +21,7 @@ func main() {
         total += x[i]
     }
     fmt.Println(total / float64(len(x)))
-}*/
+}
 
 func main() {
     var x [5]float64
@@ -31,6 +31,15 @@ func main() {
     x[3] = 82
     x[4] = 83 
 
+    var total float64 = 0
+    for _, value := range x {
+        total += value
+    }
+    fmt.Println(total / float64(len(x)))
+}*/
+
+func main() {
+    x := [5]float64{ 98, 93, 77, 82, 83 }
     var total float64 = 0
     for _, value := range x {
         total += value
