@@ -64,10 +64,28 @@ func main() {
     x := make(map[string]int)
     x["key"] = 10
     fmt.Println(x["key"])
-}*/
+}
 
 func main() {
     x := make(map[int]int)
     x[1] = 10
     fmt.Println(x[1])
+}*/
+
+func main() {
+    elements := make(map[string]string)
+    elements["H"] = "Hydrogen"
+    elements["He"] = "Helium"
+    elements["Li"] = "Lithium"
+    elements["Be"] = "Beryllium"
+    elements["B"] = "Boron"
+    elements["C"] = "Carbon"
+    elements["N"] = "Nitrogen"
+    elements["O"] = "Oxygen"
+    elements["F"] = "Fluorine"
+    elements["Ne"] = "Neon"
+
+    if name, ok := elements["Un"]; ok {
+        fmt.Println(name, ok)
+    }
 }
