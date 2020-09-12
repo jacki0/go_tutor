@@ -58,10 +58,16 @@ func main() {
     slice2 := make([]int, 2)
     copy(slice2, slice1)
     fmt.Println(slice1, slice2)
-}*/
+}
 
 func main() {
     x := make(map[string]int)
     x["key"] = 10
     fmt.Println(x["key"])
+}*/
+
+func main() {
+    x := make(map[int]int)
+    x[1] = 10
+    fmt.Println(x[1])
 }
