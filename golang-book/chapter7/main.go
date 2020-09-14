@@ -22,7 +22,11 @@ func add(args ...int) int {
     }
     return total
 }
-
+/*
 func main() {
     fmt.Println(add(1, 2, 3))
+}*/
+func main() {
+    xs := []int{1, 2, 3}
+    fmt.Println(add(xs...))
 }
