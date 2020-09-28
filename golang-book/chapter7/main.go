@@ -1,7 +1,7 @@
-
 package main
 
 import "fmt"
+
 /*
 func average(xs []float64) float64 {
     total := 0.0
@@ -127,7 +127,7 @@ func big_num(args ...int) int {
 }
 func main() {
     fmt.Println(big_num(-1, -2, -333, 100000000000))
-}*/
+}
 
 
 func makeOddGenerator() func() uint {
@@ -146,4 +146,24 @@ func main() {
         fmt.Println(nextOdd())
         i -= 1
     }
+}*/
+
+func fib(n int) []int {
+	i, j := 0, 1
+	result := []int{i, j}
+	for j < n {
+		i, j = j, i+j
+		if j > n {
+			return result
+		}
+		result = append(result, j)
+	}
+	return result
+}
+
+func main() {
+	fmt.Println("Enter a number: ")
+	var input int
+	fmt.Scanf("%d", &input)
+	fmt.Println(fib(input))
 }
