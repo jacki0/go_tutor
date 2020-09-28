@@ -113,7 +113,7 @@ func main() {
     var input int
     fmt.Scanf("%d", &input)
     fmt.Println(half(input))
-}*/
+}
 
 
 func big_num(args ...int) int {
@@ -127,4 +127,23 @@ func big_num(args ...int) int {
 }
 func main() {
     fmt.Println(big_num(-1, -2, -333, 100000000000))
+}*/
+
+
+func makeOddGenerator() func() uint {
+    i := uint(1)
+    return func() (ret uint) {
+        ret = i
+        i += 2
+        return
+    }
+}
+
+func main() {
+    nextOdd := makeOddGenerator()
+    i := 100
+    for i >= 0 {
+        fmt.Println(nextOdd())
+        i -= 1
+    }
 }
