@@ -97,7 +97,7 @@ func main() {
         fmt.Println(str)
     }()
     panic("PANIC")
-}*/
+}
 
 
 func half(input int) (int, bool) {
@@ -113,4 +113,18 @@ func main() {
     var input int
     fmt.Scanf("%d", &input)
     fmt.Println(half(input))
+}*/
+
+
+func big_num(args ...int) int {
+    bigger := -256 * 256
+    for _, i := range args {
+        if i > bigger {
+            bigger = i
+        }
+    }
+    return bigger
+}
+func main() {
+    fmt.Println(big_num(-1, -2, -333, 100000000000))
 }
