@@ -75,7 +75,7 @@ func factorial(x uint) uint {
 
 func main() {
     factorial(2)
-}*/
+}
 
 
 func first() {
@@ -87,4 +87,13 @@ func second() {
 func main() {
     defer second()
     first()
+}*/
+
+
+func main() {
+    defer func() {
+        str := recover()
+        fmt.Println(str)
+    }()
+    panic("PANIC")
 }
