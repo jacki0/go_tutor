@@ -1,3 +1,4 @@
+
 package main
 
 import "fmt"
@@ -87,7 +88,7 @@ func second() {
 func main() {
     defer second()
     first()
-}*/
+}
 
 
 func main() {
@@ -96,4 +97,20 @@ func main() {
         fmt.Println(str)
     }()
     panic("PANIC")
+}*/
+
+
+func half(input int) (int, bool) {
+    output := input % 2
+    if output == 0 {
+        return output, true
+    } else {
+        return output, false
+    }
+}
+func main() {
+    fmt.Println("Enter a number: ")
+    var input int
+    fmt.Scanf("%d", &input)
+    fmt.Println(half(input))
 }
