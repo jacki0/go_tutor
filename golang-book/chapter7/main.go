@@ -1,7 +1,7 @@
 package main
 
-/*import "fmt"
-
+import "fmt"
+/*
 func average(xs []float64) float64 {
     total := 0.0
     for _, v := range xs {
@@ -64,7 +64,7 @@ func main() {
     fmt.Println(nextEven()) // 2
     fmt.Println(nextEven()) // 4
 }
-*/
+
 
 func factorial(x uint) uint {
     if x == 0 {
@@ -75,4 +75,16 @@ func factorial(x uint) uint {
 
 func main() {
     factorial(2)
+}*/
+
+
+func first() {
+    fmt.Println("1st")
+}
+func second() {
+    fmt.Println("2nd")
+}
+func main() {
+    defer second()
+    first()
 }
