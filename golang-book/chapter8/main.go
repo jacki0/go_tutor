@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+/*
 func zero(xPtr *int) {
     *xPtr = 0
 }
@@ -10,3 +11,14 @@ func main() {
     zero(&x)
     fmt.Println(x) // x is 0
 }
+*/
+
+func one(xPtr *int) {
+    *xPtr = 1
+}
+func main() {
+    xPtr := new(int)
+    one(xPtr)
+    fmt.Println(*xPtr) // x is 1
+}
+
