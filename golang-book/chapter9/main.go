@@ -15,7 +15,7 @@ func rectangleArea(x1, y1, x2, y2 float64) float64 {
     w := distance(x1, y1, x2, y1)
     return l * w
 }
-func circleArea(c Circle) float64 {
+func circleArea(c *Circle) float64 {
     return math.Pi * math.Pow(c.r, 2)
 }
 func main() {
@@ -24,5 +24,5 @@ func main() {
     c := Circle{0, 0, 5}
 
     fmt.Println(rectangleArea(rx1, ry1, rx2, ry2))
-    fmt.Println(circleArea(c))
+    fmt.Println(circleArea(&c))
 }
