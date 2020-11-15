@@ -10,7 +10,6 @@ type Rectangle struct {
 }
 type Shape interface {
     area() float64
-    perimeter() float64
 }
 type MultiShape struct {
     shapes []Shape
@@ -65,8 +64,6 @@ func totalArea(shapes ...Shape) float64 {
     }
     return area
 }
-
-}
 func main() {
     c := Circle{0, 0, 5}
     r := Rectangle{0, 0, 10, 10}
@@ -74,6 +71,5 @@ func main() {
     fmt.Println(r.area())
     fmt.Println(c.area())
     fmt.Println(totalArea(&c, &r))
-    fmt.Println(perimeter(&r))
 }
 
