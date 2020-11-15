@@ -1,7 +1,7 @@
 package main
 
-import ("fmt"; "math")
-
+import ("fmt")/*; "math")
+/*
 type Circle struct {
     x, y, r float64
 }
@@ -20,7 +20,7 @@ func distance(x1, y1, x2, y2 float64) float64 {
     a := x2 - y1
     b := y2 - y1
     return math.Sqrt(a * a + b * b)
-}/*
+}
 func rectangleArea(x1, y1, x2, y2 float64) float64 {
     l := distance(x1, y1, x1, y2)
     w := distance(x1, y1, x2, y1)
@@ -28,11 +28,27 @@ func rectangleArea(x1, y1, x2, y2 float64) float64 {
 }
 func circleArea(c *Circle) float64 {
     return math.Pi * math.Pow(c.r, 2)
-}*/
+}
 func main() {
     c := Circle{0, 0, 5}
     r := Rectangle{0, 0, 10, 10}
 
     fmt.Println(r.area())
     fmt.Println(c.area())
+}*/
+
+type Person struct {
+    Name string
+}
+func (p *Person) Talk() {
+    fmt.Println("hi, my name is", p.Name)
+}
+type Android struct {
+    Person
+    Model string
+}
+
+func main() {
+    a := new(Android)
+    a.Talk()
 }
