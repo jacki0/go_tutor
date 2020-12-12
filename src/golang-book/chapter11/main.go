@@ -8,7 +8,9 @@ import (
 func main() {
 	xs := []float64{1, 2, 3, 4}
 	avg := m.Average(xs)
-	minimal := m.Min(xs)
+	min := m.Min(xs)
+	max := m.Max(xs)
 	fmt.Println(avg)
-	fmt.Println(minimal)
+	fmt.Println(min)
+	fmt.Println(max)
 }

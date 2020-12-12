@@ -19,3 +19,14 @@ func Min(xs []float64) float64 {
 	}
 	return min
 }
+
+//Найти найбольшее в срезе чисел
+func Max(xs []float64) float64 {
+	max := float64(-1000 * 4110)
+	for _, x := range xs {
+		if x > max {
+			max = x
+		}
+	}
+	return max
+}
