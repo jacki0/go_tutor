@@ -12,7 +12,7 @@ func Average(xs []float64) float64 {
 	return total / float64(len(xs))
 }
 
-//Найти меньшее в срезе чисел
+// Найти меньшее в срезе чисел
 func Min(xs []float64) float64 {
 	min := float64(1000 * 1000)
 	if len(xs) == 0 {
@@ -26,7 +26,7 @@ func Min(xs []float64) float64 {
 	return min
 }
 
-//Найти найбольшее в срезе чисел
+// Найти найбольшее в срезе чисел
 func Max(xs []float64) float64 {
 	if len(xs) == 0 {
 		return 0
