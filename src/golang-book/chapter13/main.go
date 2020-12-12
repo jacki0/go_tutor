@@ -2,47 +2,29 @@ package main
 
 import (
 	"fmt"
-	"strings"
+	"os"
 )
 
 func main() {
-	fmt.Println(
-		// true
-		strings.Contains("test", "es"),
+	file, err := os.Open("test.txt")
+	if err != nil {
+		//  здесь перехватывается ошибка
+		return
+	}
+	defer file.Close()
 
-		// 2
-		strings.Count("test", "t"),
+	// получить размер файла
+	stat, err := file.Stat()
+	if err != nil {
+		return
+	}
+	// чтение файла
+	bs := make([]byte, stat.Size())
+	_, err = file.Read(bs)
+	if err != nil {
+		return
+	}
 
-		// true
-		strings.HasPrefix("test", "te"),
-
-		// true
-		strings.HasSuffix("test", "st"),
-
-		// 1
-		strings.Index("test", "e"),
-
-		// "a-b"
-		strings.Join([]string{"a", "b"}, "-"),
-
-		// == "aaaaa"
-		strings.Repeat("a", 5),
-
-		// "bbaa"
-		strings.Replace("aaaa", "a", "b", 2),
-
-		// []string{"a", "b", "c", "d", "e"}
-		strings.Split("a-b-v-d-e", "-"),
-
-		// "test"
-		strings.ToLower("TEST"),
-
-		// "TEST"
-		strings.ToUpper("test"),
-	)
-
-	arr := []byte("test")
-	str := string([]byte{'t', 'e', 's', 't'})
-	fmt.Println(arr)
+	str := string(bs)
 	fmt.Println(str)
 }
