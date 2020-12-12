@@ -1,16 +1,14 @@
 package main
 
 import (
+	"fmt"
 	"os"
+	"path/filepath"
 )
 
 func main() {
-	file, err := os.Create("test.txt")
-	if err != nil {
-		// здесь перехватывается ошибка
-		return
-	}
-	defer file.Close()
-
-	file.WriteString("test")
+	filepath.Walk(".", func(path string, info os.FileInfo, err error) error {
+		fmt.Println(path)
+		return nil
+	})
 }
