@@ -1,16 +1,16 @@
 package main
 
 import (
-	"fmt"
-	"io/ioutil"
+	"os"
 )
 
 func main() {
-	bs, err := ioutil.ReadFile("test.txt")
+	file, err := os.Create("test.txt")
 	if err != nil {
-		//  здесь перехватывается ошибка
+		// здесь перехватывается ошибка
 		return
 	}
-	str := string(bs)
-	fmt.Println(str)
+	defer file.Close()
+
+	file.WriteString("test")
 }
