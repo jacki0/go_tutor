@@ -28,6 +28,9 @@ func Min(xs []float64) float64 {
 
 //Найти найбольшее в срезе чисел
 func Max(xs []float64) float64 {
+	if len(xs) == 0 {
+		return 0
+	}
 	max := float64(-1000 * 4110)
 	for _, x := range xs {
 		if x > max {
