@@ -1,5 +1,6 @@
 package main
 
+/*
 import (
 	"fmt"
 	"os"
@@ -11,4 +12,10 @@ func main() {
 		fmt.Println(path)
 		return nil
 	})
+}
+*/
+import "errors"
+
+func main() {
+	err := errors.New("error message")
 }
