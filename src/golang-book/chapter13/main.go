@@ -1,16 +1,24 @@
 package main
 
 import (
-	"flag"
 	"fmt"
-	"math/rand"
+	"sync"
+	"time"
 )
 
 func main() {
-	// Определение флагов
-	maxp := flag.Int("max", 6, "the max value")
-	// Парсинг
-	flag.Parse()
-	//  Генерация числа от 0 до max
-	fmt.Println(rand.Intn(*maxp))
+	m := new(sync.Mutex)
+
+	for i := 0; i < 10; i++ {
+		go func(i int) {
+			m.Lock()
+			fmt.Println(i, "start")
+			time.Sleep(time.Second)
+			fmt.Println(i, "end")
+			m.Unlock()
+		}(i)
+	}
+
+	var input string
+	fmt.Scanln(&input)
 }
